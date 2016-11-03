@@ -26,6 +26,11 @@ public class ImageUtil {
      */
     public static final String PICTURE_DIRECTORY = "compressed_files";
 
+    /**
+     * Value that will be considered a parameter for the bitmap compression.
+     */
+    private static final int COMPRESSION_QUALITY = 50;
+
     private ImageUtil() { }
 
     /**
@@ -33,7 +38,7 @@ public class ImageUtil {
      * @param imageUri
      * @return
      */
-    public static Bitmap getBitmapFromUri(Uri imageUri){
+    private static Bitmap getBitmapFromUri(Uri imageUri){
         // First decode with inJustDecodeBounds=true to check dimensions
         final BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = false;
@@ -87,7 +92,7 @@ public class ImageUtil {
             fos = new FileOutputStream(destinationInternalImageFile);
             // Use the compress method on the BitMap object to write image to the OutputStream
 
-            bitmapImage.compress(Bitmap.CompressFormat.JPEG, 50, fos);
+            bitmapImage.compress(Bitmap.CompressFormat.JPEG, COMPRESSION_QUALITY, fos);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
