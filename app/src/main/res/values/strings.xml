@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CompressFiles</string>
+    <string name="image_source">Escolha fonte da imagem</string>
+    <string name="gallery">Galeria</string>
+    <string name="camera">Câmera</string>
+    <string name="camera_no_permission">É necessário autorizar o uso da câmera para utilizar esta funcionalidade.</string>
+    <string name="gallery_no_permission">É necessário autorizar o acesso à galeria para utilizar esta funcionalidade.</string>
+    <string name="camera_failed">A captura da imagem falhou. Por favor, tente novamente.</string>
+    <string name="gallery_failed">A busca da imagen na galeria falhou. Por favor, tente novamente.</string>
+    <string name="zip">Comprimir</string>
+    <string name="empty_list">Sua lista de imagens está vazia. Por favor, adicione pelo menos uma imagem antes de tentar comprimir.</string>
+    <plurals name="number_images_added">
+        <item quantity="one">%d imagem na lista</item>
+        <item quantity="other">%d imagens na lista</item>
+    </plurals>
+</resources>
